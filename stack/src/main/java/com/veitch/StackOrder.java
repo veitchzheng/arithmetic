@@ -17,7 +17,6 @@ public class StackOrder {
 
         Stack<Integer> orderStack = new Stack<>();
 
-        Integer temp;
 
         while (!stack.isEmpty()){
             if (orderStack.isEmpty()) {
@@ -28,7 +27,7 @@ public class StackOrder {
             if (orderStack.peek() > stack.peek()) {
                 orderStack.push(stack.pop());
             } else {
-                temp = stack.pop();
+                Integer temp = stack.pop();
 
                 while (!orderStack.isEmpty() && temp > orderStack.peek()){
                     stack.push(orderStack.pop());
